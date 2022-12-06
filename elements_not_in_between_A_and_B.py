@@ -1,10 +1,14 @@
 n=int(input())
 l=list(map(int,input().split()))
 a,b=map(int,input().split())
-c=0
-for i in range(n):
-    if l[i]<a or l[i]>b:
-        print(l[i],end=" ")
-        c+=1
-if c==0:
+c=[]
+d=[]
+for i in range(a,b+1):
+    c.append(i)
+for i in l:
+    if i not in c:
+        d.append(i)
+if len(d)==0:
     print(-1)
+else:
+    print(*d)
