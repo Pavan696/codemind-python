@@ -1,18 +1,16 @@
 import math
-def is_prime(a):
-    if a>1:
-        for i in range(2,int(math.sqrt(a)+1)):
-            if a%i==0:
-                return False
-                break
-    if a==1:
+def prime(x):
+    if x==0 or x==1:
         return False
+    else:
+        for i in range(2,int(math.sqrt(x))+1):
+            if x%i==0:
+                return False
     return True
-    
 a=int(input())
 b=int(input())
 c=0
 for i in range(a,b+1):
-    if is_prime(i)==True:
+    if prime(i)==True:
         c+=1
 print(c)
