@@ -1,13 +1,11 @@
 n=int(input())
-a=list(map(int,input().split()))
-x=int(input())
-s=0
-for i in a:          
-    b=a.count(i)    
-    if(x==b):
-        print(i,end=' ')
-        s=1
-        if(b>1):        
-            a.remove(i)
-if(s==0):
-    print('-1')
+l=list(map(int,input().split()))
+b=int(input())
+c=[]
+for i in l:
+    if i not in c and l.count(i)==b:
+        c.append(i)
+if len(c)==0:
+    print(-1)
+else:
+    print(*c)
