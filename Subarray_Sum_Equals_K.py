@@ -1,16 +1,16 @@
-n,k=map(int,input().split())
-arr=list(map(int,input().split()))
+a,b=map(int,input().split())
+l=list(map(int,input().split()))
 c=0
-s=0
-for i in range(n):
-    if(arr[i]==k):
+for i in l:
+    if i == b:
         c+=1
-for i in range(n):
+for i in range(a):
     s=0
-    s=s+arr[i]
-    for j in range(i+1,n):
-        s=s+arr[j]
-        if(s==k):
+    s+=l[i]
+    for j in range(i+1,a):
+        s+=l[j]
+        if s==b:
             c+=1
+        elif s>b:
+            break
 print(c)
-        
