@@ -1,13 +1,12 @@
-a=int(input())
+k=int(input())
 l=list(map(int,input().split()))
 b=[]
-for i in range(a):
-    t=set(l)
-    t.discard(l[i])
+for i in range(k):
+    a=[]
     s=1
-    for i in t:
-        s*=i
+    a.append(l[i])
+    for j in range(k):
+        if l[j] not in a:
+            s*=l[j]
     b.append(s)
 print(*b)
-    
-
