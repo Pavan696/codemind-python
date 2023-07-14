@@ -1,11 +1,8 @@
 a=int(input())
 l=list(map(int,input().split()))
-b=[]
+n=[]
 for i in l:
-    if i < 0:
-        i=abs(i)
-    i=len(str(i))
-    b.append(i)
+    n.append(len(str(i)))
 for i in range(a):
-    if b[i]==max(b):
+    if n[i]==max(n):
         print(l[i],end=' ')
