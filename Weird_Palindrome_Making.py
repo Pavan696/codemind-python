@@ -1,9 +1,8 @@
-a=int(input())
-for i in range(a):
+t=int(input())
+for i in range(t):
     n=int(input())
     a=list(map(int,input().split()))
-    s=0
-    for i in range(n):
-        if a[i]%2!=0:
-            s+=1
-    print(s//2)
+    c=0
+    for j in a:
+        c+=j%2
+    print(c//2)
